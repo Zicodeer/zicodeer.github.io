@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://zicodeer.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Jul 2020 08:45:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://zicodeer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HashMap</title>
+      <link>https://zicodeer.github.io/post/blog/</link>
+      <pubDate>Thu, 16 Jul 2020 08:45:35 +0800</pubDate>
+      
+      <guid>https://zicodeer.github.io/post/blog/</guid>
+      <description>HashMap 简介 HashMap 主要用来存放键值对，它基于哈希表的Map接口实现，是常用的Java集合之一。
+JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的（“拉链法”解决冲突）.JDK1.8 以后在解决哈希冲突时有了较大的变化，当链表长度大于阈值（默认为 8）时，将链表转化为红黑树（将链表转换成红黑树前会判断，如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树），以减少搜索时间，具体可以参考 treeifyBin方法。
+底层数据结构分析 JDK1.8之前 JDK1.8 之前 HashMap 底层是 数组和链表 结合在一起使用也就是 链表散列。HashMap 通过 key 的 hashCode 经过扰动函数处理过后得到 hash 值，然后通过 (n - 1) &amp;amp; hash 判断当前元素存放的位置（这里的 n 指的是数组的长度），如果当前位置存在元素的话，就判断该元素与要存入的元素的 hash 值以及 key 是否相同，如果相同的话，直接覆盖，不相同就通过拉链法解决冲突。
+所谓扰动函数指的就是 HashMap 的 hash 方法。使用 hash 方法也就是扰动函数是为了防止一些实现比较差的 hashCode() 方法 换句话说使用扰动函数之后可以减少碰撞。
+JDK 1.8 HashMap 的 hash 方法源码:
+JDK 1.8 的 hash方法 相比于 JDK 1.7 hash 方法更加简化，但是原理不变。</description>
+    </item>
+    
+  </channel>
+</rss>
