@@ -6,10 +6,22 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2020 08:45:35 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2020 17:53:11 +0800</lastBuildDate>
     
 	<atom:link href="https://zicodeer.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java集合框架</title>
+      <link>https://zicodeer.github.io/post/collection/</link>
+      <pubDate>Tue, 21 Jul 2020 17:53:11 +0800</pubDate>
+      
+      <guid>https://zicodeer.github.io/post/collection/</guid>
+      <description>1.1. 集合概述 1.1.1. Java 集合概览 从下图可以看出，在 Java 中除了以 Map 结尾的类之外， 其他类都实现了 Collection 接口。
+并且，以 Map 结尾的类都实现了 Map 接口。
+1.1.2. 说说 List,Set,Map 三者的区别？  List(对付顺序的好帮手)： 存储的元素是有序的、可重复的。 Set(注重独一无二的性质): 存储的元素是无序的、不可重复的。 Map(用 Key 来搜索的专家): 使用键值对（kye-value）存储，类似于数学上的函数 y=f(x)，“x”代表 key，&amp;rdquo;y&amp;rdquo;代表 value，Key 是无序的、不可重复的，value 是无序的、可重复的，每个键最多映射到一个值。  1.1.3. 集合框架底层数据结构总结 先来看一下 Collection 接口下面的集合。
+1.1.3.1. List  Arraylist： Object[]数组 Vector：Object[]数组 LinkedList： 双向链表(JDK1.6 之前为循环链表，JDK1.7 取消了循环)  1.1.3.2. Set  HashSet（无序，唯一）: 基于 HashMap 实现的，底层采用 HashMap 来保存元素 LinkedHashSet：LinkedHashSet 是 HashSet 的子类，并且其内部是通过 LinkedHashMap 来实现的。有点类似于我们之前说的 LinkedHashMap 其内部是基于 HashMap 实现一样，不过还是有一点点区别的 TreeSet（有序，唯一）： 红黑树(自平衡的排序二叉树)  再来看看 Map 接口下面的集合。</description>
+    </item>
     
     <item>
       <title>HashMap</title>
