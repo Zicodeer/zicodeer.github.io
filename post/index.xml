@@ -6,10 +6,36 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jul 2020 21:31:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 17:13:37 +0800</lastBuildDate>
     
 	<atom:link href="https://zicodeer.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Juc</title>
+      <link>https://zicodeer.github.io/post/juc/</link>
+      <pubDate>Fri, 21 Aug 2020 17:13:37 +0800</pubDate>
+      
+      <guid>https://zicodeer.github.io/post/juc/</guid>
+      <description>1 Atomic 原子类介绍 Atomic 翻译成中文是原子的意思。在化学上，我们知道原子是构成一般物质的最小单位，在化学反应中是不可分割的。在我们这里 Atomic 是指一个操作是不可中断的。即使是在多个线程一起执行的时候，一个操作一旦开始，就不会被其他线程干扰。
+所以，所谓原子类说简单点就是具有原子/原子操作特征的类。
+并发包 java.util.concurrent 的原子类都存放在java.util.concurrent.atomic下,如下图所示。
+JUC原子类概览
+根据操作的数据类型，可以将JUC包中的原子类分为4类
+基本类型
+使用原子的方式更新基本类型
+AtomicInteger：整型原子类 AtomicLong：长整型原子类 AtomicBoolean ：布尔型原子类 数组类型
+使用原子的方式更新数组里的某个元素
+AtomicIntegerArray：整型数组原子类 AtomicLongArray：长整型数组原子类 AtomicReferenceArray ：引用类型数组原子类 引用类型
+AtomicReference：引用类型原子类 AtomicMarkableReference：原子更新带有标记的引用类型。该类将 boolean 标记与引用关联起来，也可以解决使用 CAS 进行原子更新时可能出现的 ABA 问题。 AtomicStampedReference ：原子更新带有版本号的引用类型。该类将整数值与引用关联起来，可用于解决原子的更新数据和数据的版本号，可以解决使用 CAS 进行原子更新时可能出现的 ABA 问题。 对象的属性修改类型
+AtomicIntegerFieldUpdater:原子更新整型字段的更新器 AtomicLongFieldUpdater：原子更新长整型字段的更新器 AtomicReferenceFieldUpdater：原子更新引用类型里的字段 修正: AtomicMarkableReference 不能解决ABA问题 issue#626
+/**  AtomicMarkableReference是将一个boolean值作是否有更改的标记，本质就是它的版本号只有两个，true和false，
+修改的时候在这两个版本号之间来回切换，这样做并不能解决ABA的问题，只是会降低ABA问题发生的几率而已
+@author : mazh
+@Date : 2020/1/17 14:41 */
+public class SolveABAByAtomicMarkableReference {
+ private static AtomicMarkableReference atomicMarkableReference = new AtomicMarkableReference(100, false); public static void main(String[] args) { Thread refT1 = new Thread(() -&amp;gt; { try { TimeUnit.</description>
+    </item>
     
     <item>
       <title>AQS原理及其同步组件</title>
